@@ -1,0 +1,36 @@
+<html lang="zh">
+    <head>
+        <meta charset="utf-8">
+        <title>选择器的优先级</title>
+<!--
+    css选择器遵循的规律：
+    1.相同的类型的选择器遵循：a.就近原则 b.叠加原则
+    2.不同类型的选择器遵循：id选择器 > 类选择器 > 标签选择器
+    3.选择器的针对性越强，它的优先级就越高
+    4.选择器的权值加到一起，大的优先；如果权值相同，后定义的优先
+    5.important>内联>id>类|伪类|属性选择|伪元素>标签>通配符>继承
+-->
+        <style>
+            #main{
+                color:yellow
+            }
+            .test1{
+                color: blue;
+            }
+            .test2{
+                color: green;
+            }
+            /*
+            通配符：
+                1.优先级别非常低
+                2.性能比较差
+            */
+            *{
+                font-size: 30px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="main" class="test1 test2">用来测试选择器的优先级</div>
+    </body>
+</html>

@@ -1,0 +1,90 @@
+<html lang="zh">
+    <head>
+        <meta charset="utf-8">
+        <title>CSS选择器</title>
+        <style>
+            /*标签选择器*/
+            div{
+                color: bisque;
+            }
+            p{
+                color: aqua;
+            }
+            /*类选择器*/
+            .test {
+                background-color: greenyellow;
+            }
+            /*id选择器*/
+            #main{
+                background-color: orange;
+            }
+            /*并列选择器*/
+            #main, .test {
+                font-size: 25px;
+            }
+            /*复合选择器*/
+            p.test {
+                border: 1px solid red;
+            }
+            /*后代选择器*/
+            div a {
+                font-size: 30px;
+                color: black;
+            }
+            /*直接后代选择器*/
+            #dd>a {
+                color: green;
+            }
+            /*相邻兄弟选择器*/
+            .test + p {
+                color: blue;
+            }
+            /*属性选择器*/
+            div[name][age] {
+                font-size: 50
+            }
+            #li[name="li"] {
+                font-size: 50;
+                color: red;
+            }
+            /*伪类*/
+            input:focus {
+                width:500px;
+                height: 50px;
+                background-color: yellow;
+            }
+            input:hover {
+                background-color: orange;
+            }
+            /*伪元素 first-letter, first-line*/
+            #xu:first-letter {
+                font-size: 30;
+                color: red;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <div id="main">这是一个容器标签</div>
+        <div name="zhang" age=20>这是一个容器标签</div>
+        <div id="li" name="li">这是一个容器标签</div>
+        <div>这是一个容器标签</div>
+        <p>相邻兄弟选择器</p>
+        <div class="test">
+            这是一个容器标签
+            <a href="#">这是一个超链接</a>
+            <div id="dd">
+                <a href="#">又是一个超链接</a>
+            </div>
+        </div>
+        <p>相邻兄弟选择器</p>
+        <p>这是一个段落</p>
+        <p>这是一个段落</p>
+        <p>这是一个段落</p>
+        <p id="xu">这是一个段落</p>
+        <p class="test">这是一个段落</p>
+        
+        <br><br><br>
+        <input placeholder="请输入内容">
+    </body>
+</html>

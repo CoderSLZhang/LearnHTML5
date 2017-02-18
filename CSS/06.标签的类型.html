@@ -1,0 +1,62 @@
+<html lang="zh">
+    <head>
+        <meta charset="utf-8">
+        <title>标签的类型</title>
+        <style>
+            div{
+                background-color: red;
+                width: 320px;
+                height: 100px;
+            }
+            p{
+                background-color: red;
+                width: 320px;
+                height: 100px;
+            }
+            span{
+                background-color: yellow;
+                /*
+                display: inline-block;
+                width:100px;
+                height: 100px;
+                */
+            }
+            label{
+                background-color: orange;
+            }
+            input {
+                width: 100px;
+                height: 44px;
+            }
+            button {
+                background-color: green;
+                width: 100px;
+                height: 44px;
+            }
+            ／*隐藏标签 display:none*／
+            
+            
+            ／*变为块级标签 display:block|inline|inline-block*／
+            
+        </style>
+    </head>
+    <body>
+<!--        块级标签: div, p, h1, ul, li: 独占一行，能随时设置宽度和高度-->
+        <div>div标签</div>
+        <p>p标签</p>
+<!--        行内标签（内联标签）：span, a, label：多个标签能同时显示在一行，宽度和高度取决于内容-->
+        <span>span标签1</span>
+        <span>span标签2</span>
+        <label>label标签1</label>
+        <label>label标签2</label>
+<!--        行内-块级标签（内联-块级标签）：input, button: 能够显示在一行，设置宽度高度-->
+        <input>
+        <input>
+        <button>button标签1</button>
+        <button>button标签2</button>
+        
+        <h1>隐藏标签</h1>
+        
+        <span id="block">变为块级标签</span>
+    </body>
+</html>
