@@ -1,0 +1,32 @@
+<html lang="zh">
+   <head>
+       <meta charset="utf-8">
+       <title>CSS的脱离标准流</title>
+       <style>
+           #main{
+               background-color: red;
+               width: 200px;
+               height: 100px;
+           }
+           #a{
+               background-color: blue;
+               float: left;
+               width:50px;
+               height:50px;
+           }
+           #b{
+               background-color: green;
+               float: right;
+               width:50px;
+               height: 50px;
+           }
+       </style>
+   </head>
+   <body>
+       <div id="main">
+          <div id="a">1</div>
+          <div id="b">2</div>
+          <div id="c">3</div>
+       </div>
+   </body>
+</html>

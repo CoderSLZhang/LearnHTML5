@@ -1,0 +1,33 @@
+<html lang="zh">
+   <head>
+       <meta charset="utf-8">
+       <title>CSS的布局</title>
+       <style>
+           #main{
+               background-color: red;
+               width:200px;
+               height: 100px;
+               position: relative;
+           }
+           #position{
+               background-color: green;
+               position: absolute;
+               left:30px;
+               top: 30px;
+           }
+           #a{
+               background-color: orchid;
+               position: fixed;
+               bottom: 0px;
+               width:100%;
+               left: 0px;
+           }
+       </style>
+   </head>
+    <body>
+        <div id="main">
+            <div id="position">positon</div>
+        </div>
+        <div id="a">111222333</div>
+    </body>
+</html>
