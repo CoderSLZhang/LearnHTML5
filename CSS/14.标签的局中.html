@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh">
+<!--  
+标签水平局中：
+ 行内标签和行内-块级标签：在父标签中设置text-align: center;
+ 块级标签: 在自身设置margin:0 auto;
+
+ 标签垂直居中：
+ 行内标签和行内-块级标签:在父标签中设置line-height
+ 块级标签：position: absolute:
+         left:50%
+         top:50%
+         transform: translate(-50%, -50%) 
+ 
+  -->
+   <head>
+       <meta charset="utf-8">
+       <title>标签的局中</title>
+       <style>
+           #main{
+               background-color: red;
+               width:300;
+               height: 150;
+               position: relative;
+           }
+           #sub{
+               background-color: yellow;
+               height: 50;
+               width:100;
+               margin: 0 auto;
+               position: absolute;
+               left: 50%;
+               top: 50%;
+               transform: translate(-50%, -50%)
+                
+           }
+       </style>
+   </head>
+   <body>
+        <div id="main">
+            <div id="sub"></div>
+        </div>
+       
+   </body>
+    
+</html>
