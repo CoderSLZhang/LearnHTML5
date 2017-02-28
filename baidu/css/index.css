@@ -3,13 +3,20 @@
     padding: 0;
 }
 
+body{
+    background: url(../img/bg.jpg);
+    background-size: cover;
+}
+
 #header{
     text-align: right;
-    margin-top: 20px;
+    background-color: rgba(0, 0, 0, 0.3);
+    height: 44px;
+    line-height: 44px;
 }
 
 #header a{
-    color: black;
+    color: white;
     font-weight: 600;
     font-size: 13px;
     font-family: sans-serif;
