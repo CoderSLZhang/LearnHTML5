@@ -1,0 +1,94 @@
+@font-face{
+    font-family:BebasNeue-webfont;
+    src: url("../font/BebasNeue-webfont.ttf");
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: url(../imgs/pattern.gif)
+}
+
+.top-line{
+    height: 5px;
+    background-color: red;
+}
+
+header nav{
+    text-align: center;
+}
+
+header nav ul, header nav ul li{
+    display: inline-block;
+}
+
+header nav ul li a{
+    text-decoration: none;
+    display: inline-block;
+    color: white;
+    font-size: 30px;
+    width: 200px;
+    height: 65px;
+    line-height: 60px;
+    font-family: BebasNeue-webfont;
+}
+
+.first-nav, header nav ul li a:hover{
+    color: black;
+    background-color: white;
+}
+
+main article{
+    margin: 80px 0;
+    background-color: white;
+    text-align: center;
+}
+
+.love{
+    display: inline-block;
+    width: 382px;
+    text-align: left;
+    margin: 20px 10px;
+}
+
+.love p{
+    line-height: 20px;
+    text-indent: 30px;
+}
+
+.love a{
+    text-decoration: none;
+    display: inline-block;
+    width: 160px;
+    height: 40px;
+    background-color: orangered;
+    color: white;
+    font-size: 23px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.love a:hover{
+    background-color: orange;
+}
+
+footer address{
+    text-align: center;
+}
+
+footer ul, footer li {
+    display: inline-block;
+}
+
+footer img{
+    margin: 0 7px;
+}
+
+footer img:hover{
+    opacity: 0.7;
+}
