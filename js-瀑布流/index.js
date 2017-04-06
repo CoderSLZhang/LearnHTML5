@@ -9,6 +9,10 @@ window.onload = function() {
     waterFlow(parent, boxes); 
 }
 
+window.onscroll = function() {
+    checkWillLoad();
+}
+
 function waterFlow(parent, boxes) {
     var boxWidth = boxes[0].offsetWidth;
     var widowWidth = document.body.offsetWidth;
@@ -38,3 +42,17 @@ function waterFlow(parent, boxes) {
         }
     }
 } 
+
+function checkWillLoad() {
+    var boxes = $('main').getElementsByClassName('box');
+    var lastBox = boxes[boxes.length - 1];
+    
+    var lastOffset = lastBox.offsetHeight * 0.5 + lastBox.offsetTop;
+    
+    var screenHeight = document.body.offsetHeight || document.documentElement.offsetHeight;
+    var scrollOffset = screenHeight + document.body.scrollTop;
+    
+    console.log(lastOffset, lastBox.offsetTop,  scrollOffset);
+    
+    return lastOffset <= scrollOffset;
+}
