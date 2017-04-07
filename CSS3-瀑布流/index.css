@@ -1,0 +1,26 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+#main{
+    column-width:200px;
+    -moz-column-width:200px; /* Firefox */
+    -webkit-column-width:200px; /* Safari 和 Chrome */
+}
+
+.box{
+    float: left;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.pic{
+    border: 1px solid #dddddd;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.pic img{
+    width: 200px;
+}
