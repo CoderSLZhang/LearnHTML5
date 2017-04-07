@@ -3,21 +3,47 @@ function $(id) {
 }
 
 window.onload = function() {
-    var parent = $('main');
-    var boxes = document.getElementsByClassName('box');
-    
-    waterFlow(parent, boxes); 
+    layoutWaterFlow();
 }
 
 window.onresize = function() {
+    layoutWaterFlow();
+}
+
+function layoutWaterFlow() {
     var parent = $('main');
     var boxes = document.getElementsByClassName('box');
     
     waterFlow(parent, boxes); 
 }
 
+var data = [
+    {'img': '1.jpg'},
+    {'img': '2.jpg'},
+    {'img': '3.jpg'},
+    {'img': '4.jpg'},
+    {'img': '5.jpg'},
+    {'img': '6.jpg'}
+];
+
 window.onscroll = function() {
-    checkWillLoad();
+    if (checkWillLoad()) {
+       for (var i=0; i<data.length; i++) {
+           var box = document.createElement('div');
+           box.className = 'box';
+           $('main').appendChild(box);
+           
+           var pic = document.createElement('div');
+           pic.className = 'pic';
+           box.appendChild(pic);
+           
+           var img = document.createElement('img');
+           img.src = 'images/' + (i + 1) + '.jpg';
+           pic.appendChild(img);
+       } 
+        
+        layoutWaterFlow();
+    }
 }
 
 function waterFlow(parent, boxes) {
@@ -57,10 +83,8 @@ function checkWillLoad() {
     
     var lastOffset = lastBox.offsetHeight * 0.5 + lastBox.offsetTop;
     
-    var screenHeight = document.body.offsetHeight || document.documentElement.offsetHeight;
+    var screenHeight = document.body.clientHeight || document.documentElement.clientHeight;
     var scrollOffset = screenHeight + document.body.scrollTop;
-    
-    console.log(lastOffset, lastBox.offsetTop,  scrollOffset);
-    
+        
     return lastOffset <= scrollOffset;
 }
