@@ -4,11 +4,26 @@
         <title>CSS的页内样式</title>
         <link rel="stylesheet" href="css/index.css">
         <style>
+            body {
+                background-image: url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1492406513688&di=42fd2e0b553f5b5d0236c22ac3491d92&imgtype=0&src=http%3A%2F%2Fimg.carvenus.com%2Fim%2Fnews%2F2014%2F04%2F140416_n01a.jpg);
+                background-size: contain;
+                background-repeat: no-repeat;
+                
+            }
             div {
                 color: red;
-                font-size: 20px;
+                font-size: 1rem;
                 border: 4px solid yellow
             }
+            
+            .outer {
+                font-size: 30px;
+            }
+            
+            .outer div {
+                font-size: 100%;
+            }
+            
         </style>
     </head>
     <body>
@@ -18,6 +33,11 @@
         <div>这是一个容器标签</div>
         <div>这是一个容器标签</div>
         <div>这是一个容器标签</div>
+        
+        <div class="outer">
+            我是Outer
+            <div>我是div</div>
+        </div>
 
     </body>
 </html>

@@ -9,6 +9,13 @@ window.onload = function() {
     waterFlow(parent, boxes); 
 }
 
+window.onresize = function() {
+    var parent = $('main');
+    var boxes = document.getElementsByClassName('box');
+    
+    waterFlow(parent, boxes); 
+}
+
 function waterFlow(parent, boxes) {
     var boxWidth = boxes[0].offsetWidth;
     var widowWidth = document.body.offsetWidth;
@@ -25,6 +32,7 @@ function waterFlow(parent, boxes) {
         
         if (i < cols) {
             heights.push(height);
+            boxes[i].style.position = 'static';
         } else {
             boxes[i].style.position = 'absolute';
 
