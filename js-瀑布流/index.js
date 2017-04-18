@@ -3,6 +3,14 @@ function $(id) {
 }
 
 window.onload = function() {
+    layoutWaterFlow();
+}
+
+window.onresize = function() {
+    layoutWaterFlow();
+}
+
+function layoutWaterFlow() {
     var parent = $('main');
     var boxes = document.getElementsByClassName('box');
     
@@ -14,6 +22,34 @@ window.onresize = function() {
     var boxes = document.getElementsByClassName('box');
     
     waterFlow(parent, boxes); 
+
+var data = [
+    {'img': '1.jpg'},
+    {'img': '2.jpg'},
+    {'img': '3.jpg'},
+    {'img': '4.jpg'},
+    {'img': '5.jpg'},
+    {'img': '6.jpg'}
+];
+
+window.onscroll = function() {
+    if (checkWillLoad()) {
+       for (var i=0; i<data.length; i++) {
+           var box = document.createElement('div');
+           box.className = 'box';
+           $('main').appendChild(box);
+           
+           var pic = document.createElement('div');
+           pic.className = 'pic';
+           box.appendChild(pic);
+           
+           var img = document.createElement('img');
+           img.src = 'images/' + (i + 1) + '.jpg';
+           pic.appendChild(img);
+       } 
+        
+        layoutWaterFlow();
+    }
 }
 
 function waterFlow(parent, boxes) {
@@ -31,6 +67,7 @@ function waterFlow(parent, boxes) {
         var height = boxes[i].offsetHeight;
         
         if (i < cols) {
+            boxes[i].style.position = 'static';
             heights.push(height);
             boxes[i].style.position = 'static';
         } else {
@@ -46,3 +83,15 @@ function waterFlow(parent, boxes) {
         }
     }
 } 
+
+function checkWillLoad() {
+    var boxes = $('main').getElementsByClassName('box');
+    var lastBox = boxes[boxes.length - 1];
+    
+    var lastOffset = lastBox.offsetHeight * 0.5 + lastBox.offsetTop;
+    
+    var screenHeight = document.body.clientHeight || document.documentElement.clientHeight;
+    var scrollOffset = screenHeight + document.body.scrollTop;
+        
+    return lastOffset <= scrollOffset;
+}
