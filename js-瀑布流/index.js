@@ -17,12 +17,6 @@ function layoutWaterFlow() {
     waterFlow(parent, boxes); 
 }
 
-window.onresize = function() {
-    var parent = $('main');
-    var boxes = document.getElementsByClassName('box');
-    
-    waterFlow(parent, boxes); 
-
 var data = [
     {'img': '1.jpg'},
     {'img': '2.jpg'},
@@ -32,7 +26,10 @@ var data = [
     {'img': '6.jpg'}
 ];
 
+
 window.onscroll = function() {
+
+    
     if (checkWillLoad()) {
        for (var i=0; i<data.length; i++) {
            var box = document.createElement('div');

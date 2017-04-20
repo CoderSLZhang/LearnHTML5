@@ -17,8 +17,10 @@
     border: 1px solid #dddddd;
     padding: 10px;
     border-radius: 5px;
+    font-size: 0;
 }
 
 .pic img{
     width: 200px;
+/*    vertical-align: middle;*/
 }

@@ -5,23 +5,39 @@
     <meta charset="utf-8">
     <title>test2</title>
     <style>
-        .box1 {
-            width: 100px;
-            height: 100px;
-            background-color: red;
-            opacity: 0.7;
+        * {
+            padding: 0;
+            margin: 0;
         }
         
-        .box1: hover {
-            opacity: 0.5;
-            width: 200px;
-            background-color: yellow;
+        .document > li {
+            height: 50px;
+            line-height: 50px;
+        }
+        
+        .document > li:before {
+            content: "";
+            background-image: url("https://ss0.baidu.com/73t1bjeh1BF3odCf/it/u=1998071474,1617493752&fm=85&s=E8B004D102B3C3FB80B1343503001050");
+            width: 30px;
+            height: 30px;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        
+        .icon {
+            margin-left: 20px;
         }
         
     </style>
 </head>
     
 <body>
-    <div class="box1"></div>
+    <ul class="document">
+        <li><a href="#" class="icon">Business expenses</a></li>
+        <li><a href="#" class="icon">User Mannual</a></li>
+        <li><a href="#" class="icon">Short story</a></li>
+        <li><a href="#" class="icon">Vacation brochure</a></li>
+        <li><a href="#" class="icon">Vacation brochure</a></li>
+    </ul>
 </body>
 </html>
