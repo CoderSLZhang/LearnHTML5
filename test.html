@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+
 <html lang="zh">
 <head>
     <meta charset="utf-8">
@@ -30,7 +32,10 @@
         
         .baidu {
 /*            max-width: 100%;*/
-            width: 90%;
+            width: 200px;
+            height: 200px;
+            border-bottom-left-radius: 50%;
+            border-top-right-radius: 50%;
         }
         
         .sina {
@@ -40,12 +45,56 @@
             left: 0;
         }
         
+        .background {
+            display: inline-block;
+            background-image: url("https://ss0.baidu.com/6ONWsjip0QIZ8tyhnq/it/u=2957043501,255162184&fm=58&s=2CA2A91ACCB44C801E7194D6010000B1"),
+            url("https://www.baidu.com/img/bd_logo1.png");
+            background-position: 100% 0%;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background-size: cover;
+        }
+        
+        .backgournd: hover {
+            opacity: 0.5;
+        }
+        
+        .shadow {
+            font-size: 50px;
+            text-shadow: 10px 10px 10px lightgray;
+        }
+        
+        .box {
+            width: 300px;
+            height: 300px;
+            background-color: aqua;
+/*            -webkik-box-shadow: 10px 10px 10px lightgray;*/
+            box-shadow: 0px 0px 20px 0px black inset;
+        }
+        
+        .box: hover {
+            opacity: 0.5p
+        }
+        
+        img {
+            opacity: .75;
+            display: block;
+        }
+        
+        img.baidu: hover {
+            opacity: 1.0;
+        }
+        
     </style>
 </head>
 <body>
     <main>
         <img class="baidu" src="https://www.baidu.com/img/bd_logo1.png">
         <img class="sina" src="https://ss0.baidu.com/6ONWsjip0QIZ8tyhnq/it/u=2957043501,255162184&fm=58&s=2CA2A91ACCB44C801E7194D6010000B1" title="sina">
+        <div class="background"></div>
+        <div class="shadow">你好世界</div>
+        <div class="box"></div>
     </main>
     <aside>
     </aside>
