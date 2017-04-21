@@ -5,65 +5,33 @@
     <meta charset="utf-8">
     <title>test2</title>
     <style>
-        ol {
-            
-        }
-        
-/*
-        ul {
-            list-style-image: url("https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3668831428,253754082&fm=15&gp=0.jpg");
-        }
-*/
-        
-/*
-        ul > li {
-            background-image: url("https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3668831428,253754082&fm=15&gp=0.jpg");
-            background-repeat: no-repeat;
-            
-            padding-left: 100px;
-            line-height: 50px;
-            margin-bottom: 10px
-        }
-*/
-        ul li {
-            color: red;
-        }
-        
-        ul ul li {
-            color: blue;
-        }
+     
         
     </style>
 </head>
     
 <body>
-    <ol>
-        <li value="44">aaaaa</li>
-        <li>bbbbb</li>
-        <li>ccccc</li>
-        <li value="55">ddddd</li>
-        <li>eeeee</li>
-    </ol>
-    
-    <ul type="circle" >
-        <li>
-            dfffff
-            <ul>
-                <li>aaaa1111</li>
-                <li>bbbb2222</li>
-            </ul>
-        </li>
-        <li>bbbbbb</li>
-        <li>cccccc</li>
-        <li>dddddd</li>
-        <li>eeeeee</li>
-        <li>ffffff</li>
-    </ul>
-    
-    <dl>
-        <dt>Title1</dt>
-        <dd> dfkjdslkfjlsdkfjlsakfdjlaksdfjklasjdfldksjflkasdfjlkasdfjlkasjdflkasdfjklasdfjklsadjfalksfdjalksdfjalksdfjkalsdfjalksfdjlskf
-        </dd>
-    </dl>
+    <form method="post" action="">
+        <fieldset>
+            <legend>个人信息</legend>
+            <div class="form-item">
+                <label for="name">姓名</label>
+                <input type="text" placeholder="请输入姓名" name="name" id="name" required autocomplete="off" autofocus list="name-list">
+                <datalist id="name-list">
+                    <option>张三</option>
+                    <option>李四</option>
+                </datalist>
+            </div>
+            <div class="form-item">
+                <input type="radio" name="isDangYuang" value="1" id="isDangYuang">
+                <label for="isDangYuang">是否是党员</label>
+            </div>
+            
+            <div class="form-item">
+                <input type="radio" name="isDangYuang" value="2">
+                <label>是否是团员</label>
+            </div>
+        </fieldset>
+    </form>
 </body>
 </html>
